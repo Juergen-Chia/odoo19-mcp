@@ -1,5 +1,9 @@
 # Odoo 19 MCP Client Project
 
+A full-stack **Model Context Protocol (MCP)** integration for Odoo 19, enabling AI-powered natural language interaction with any Odoo model through a Gradio web interface. Talk to your ERP — no Odoo expertise required.
+
+---
+
 ## Overview
 
 Model Context Protocol (MCP) client for Odoo 19, enabling LLMs to interact with Odoo databases through a standardized protocol interface.
