@@ -1,0 +1,23 @@
+.env
+__pycache__/
+.agents/
+.claude/
+misc/
+test-debug/
+requirements copy.txt
+SESSION_2026*.md
+skills-lock.json
+
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+
+dist/
+build/
+
+
+

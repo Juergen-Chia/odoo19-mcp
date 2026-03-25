@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  odoo-mcp:
+    build: .
+    container_name: odoo-mcp-client
+    ports:
+      - "7860:7860"  # Gradio web interface
+    environment:
+      - ODOO_URL=http://host.docker.internal:8069
+      - ODOO_DATABASE=${ODOO_DATABASE}
+      - ODOO_API_KEY=${ODOO_API_KEY}
+      - READONLY_MODE=${READONLY_MODE:-false}
+      - LLM_BASE_URL=${LLM_BASE_URL}
+      - LLM_API_KEY=${LLM_API_KEY}
+      - LLM_MODEL=${LLM_MODEL:-qwen3.5-plus}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    # Run Gradio app by default
+    # To run MCP server instead, override: command: ["python", "odoo_mcp_server.py", "--transport", "stdio"]

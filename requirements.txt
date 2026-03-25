@@ -1,0 +1,7 @@
+fastmcp==2.14.3
+mcp>=1.1.0
+odoolib==2.0.0
+openai>=1.0.0
+python-dotenv>=1.0.0
+gradio>=4.0.0
+pandas
